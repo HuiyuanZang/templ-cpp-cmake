@@ -1,0 +1,40 @@
+{
+    // C/C++ Build
+    // For more information, visit: https://code.visualstudio.com/docs/editor/tasks
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++ build active file",
+            "windows": {
+                "command": "C:/msys64/mingw64/bin/g++.exe"
+            },
+            "linux": {
+                "command": "/usr/bin/g++"
+            },
+            "command": "",
+            "args": [
+                "-I",
+                "${workspaceFolder}/project/include/external/**",
+                "${workspaceFolder}/project/include/interface/**",
+                "${workspaceFolder}/project/include/internal/**",
+                "-g",
+                "${workspaceFolder}/project/src/*.cpp",
+                "${workspaceFolder}/project/main.cpp",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Custom task"
+        }
+    ],
+    "version": "2.0.0"
+}

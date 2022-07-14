@@ -1,0 +1,14 @@
+{
+    "cmake.configureSettings": {
+        "CMAKE_BUILD_TYPE": "${buildType}",
+        // Supported values: ANDROID, NONE, OS64, ARM64
+        "CROSS_COMPILE": "NONE",
+        "CMAKE_MAKE_PROGRAM": "ninja",
+        "NOLINT": 1
+    },
+    "cmake.setBuildTypeOnMultiConfig": true,
+    "cmake.preferredGenerators": [
+        "Ninja",
+        "Visual Studio 16 2019"
+    ]
+}

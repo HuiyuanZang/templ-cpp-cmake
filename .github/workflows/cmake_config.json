@@ -1,0 +1,64 @@
+{
+    "config": [
+        {
+            "name": "Windows 10 x64 MSVC",
+            "artifact": "win-x64",
+            "artifact_extension": "",
+            "os": [
+                "self-hosted",
+                "Windows",
+                "X64"
+            ],
+            "cc": "cl",
+            "cxx": "cl",
+            "environment_script": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Auxiliary/Build/vcvars64.bat",
+            "dependencies": "",
+            "cmake_flags": ""
+        },
+        {
+            "name": "Ubuntu 18.04 x64 GCC",
+            "artifact": "linux-18.04-x64",
+            "artifact_extension": "",
+            "os": [
+                "self-hosted",
+                "Linux",
+                "X64",
+                "ubuntu-18.04"
+            ],
+            "cc": "gcc",
+            "cxx": "g++",
+            "dependencies": "",
+            "cmake_flags": ""
+        },
+        {
+            "name": "Ubuntu 18.04 arm64 GCC",
+            "artifact": "linux-arm64",
+            "artifact_extension": "",
+            "os": [
+                "self-hosted",
+                "Linux",
+                "ARM64",
+                "ubuntu-18.04"
+            ],
+            "cc": "gcc",
+            "cxx": "g++",
+            "dependencies": "sudo apt-get install -y ccache",
+            "cmake_flags": ""
+        },
+        {
+            "name": "Android 24 Clang",
+            "artifact": "android-24-arm64",
+            "artifact_extension": "",
+            "os": [
+                "self-hosted",
+                "Linux",
+                "X64",
+                "ubuntu-18.04"
+            ],
+            "cc": "clang",
+            "cxx": "clang++",
+            "dependencies": "",
+            "cmake_flags": "-DCROSS_COMPILE=ANDROID"
+        }
+    ]
+}
